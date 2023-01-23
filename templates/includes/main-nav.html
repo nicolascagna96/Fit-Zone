@@ -5,10 +5,10 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="#" class="dropdown-item">By Price</a>
-                <a href="#" class="dropdown-item ">By Rating</a>
-                <a href="#" class="dropdown-item ">By Category</a>
-                <a href="#" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -16,10 +16,10 @@
                 Nutrition
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="#" class="dropdown-item">Protein</a>
-                <a href="#" class="dropdown-item">Vitamins</a>
-                <a href="#" class="dropdown-item">Bars|Drinks|</a>
-                <a href="#" class="dropdown-item">All Nutrition</a>
+                <a href="{% url 'products' %}?category=protein" class="dropdown-item">Protein</a>
+                <a href="{% url 'products' %}?category=vitamin" class="dropdown-item">Vitamins</a>
+                <a href="{% url 'products' %}?category=snacks" class="dropdown-item">Snacks&Drinks</a>
+                <a href="{% url 'products' %}?category=protein,vitamin,snacks" class="dropdown-item">All Nutrition</a>
             </div>
         </li>
 
@@ -28,31 +28,32 @@
                 Equipments
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="#" class="dropdown-item">Dumbells</a>
-                <a href="#" class="dropdown-item">Plates</a>
-                <a href="#" class="dropdown-item">Weight Plates</a>
+                <a href="{% url 'products' %}?category=dumbbells" class="dropdown-item">Dumbbells</a>
+                <a href="{% url 'products' %}?category=plates" class="dropdown-item">Plates</a>
+                <a href="{% url 'products' %}?category=racks" class="dropdown-item">Racks</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
+                <a href="{% url 'products' %}?category=dumbbells,plates,racks,accessories" class="dropdown-item">All Equipments</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Blog
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Contact Us
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Expert Advice
+                Services
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                 <a href="#" class="dropdown-item">Workout Plan</a>
                 <a href="#" class="dropdown-item">Nutritional Plans</a>
+            </div>
+        </li>
+
+        
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+                <a href="#" class="dropdown-item">Blog</a>
+                <a href="#" class="dropdown-item">Contact Us</a>
             </div>
         </li>
     </ul>
