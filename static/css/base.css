@@ -21,6 +21,8 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    margin-top: 0.57rem!important;
+    margin-bottom: 0.57rem!important;
 }
 
 .main-logo-link {
