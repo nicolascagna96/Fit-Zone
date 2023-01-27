@@ -1,13 +1,14 @@
-html {
+html{
     height: 100%;
 }
 
 body {
-    background: url('/media/pexels-andrea-piacquadio-3837423.jpg') no-repeat center center fixed;
+    background: url('/media/main_cheese_image.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
+    color: #FFF;
+    font-family: 'Inter';
+    
 }
 
 /* from Bulma */
