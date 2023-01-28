@@ -6,7 +6,6 @@ body {
     background: url('/static/image/pexels-andrea-piacquadio-3837423.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #FFF;
     font-family: 'Inter';
     
 }
@@ -22,8 +21,6 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-    margin-top: 0.57rem!important;
-    margin-bottom: 0.57rem!important;
 }
 
 .main-logo-link {
@@ -77,13 +74,13 @@ body {
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
@@ -105,6 +102,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -122,6 +123,7 @@ a.category-badge > span.badge:hover {
     height: 2px;
 }
 
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -171,6 +173,7 @@ a.category-badge > span.badge:hover {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -178,32 +181,6 @@ a.category-badge > span.badge:hover {
   .container {
     max-width: 80%;
   }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-}
-
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
 }
 
 /* Allauth form formatting */
