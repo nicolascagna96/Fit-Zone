@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!--Contact page-->
+<div class="overlay bg-lg"></div>
+<div class="contact-overlay bg-dark"></div>
+<div class="container-fluid">
+    <div class="row h-100 w-100">
+        <div class="col-12 mt-6 mb-6 contact-form">
+           
+                <h1>Contact Us</h1>
+                <p> Feel free to contact us via the form below. <br>
+                    We would love to hear your feedback regarding our products and services.</p>
+
+                <form method="POST">
+
+                    {% csrf_token %}
+
+                    {{ form.as_p  }}
+
+                    <button class="contact-btn btn btn-submit" type="submit">Submit</button>
+
+                </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

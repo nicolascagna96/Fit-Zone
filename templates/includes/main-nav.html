@@ -42,7 +42,6 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                 <a href="#" class="dropdown-item">Workout Plan</a>
-                <a href="#" class="dropdown-item">Nutritional Plans</a>
             </div>
         </li>
 
@@ -52,8 +51,8 @@
                 More
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="#" class="dropdown-item">Blog</a>
-                <a href="#" class="dropdown-item">Contact Us</a>
+                <a href="{% url 'blog_home' %}" class="dropdown-item">Blog</a>
+                <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
             </div>
         </li>
     </ul>

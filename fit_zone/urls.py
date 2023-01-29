@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from contact.views import contact
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -26,4 +27,8 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
+    path('profile/', include('profiles.urls')),
+    path('blog/', include('blog.urls')),
+    path('summernote/', include('django_summernote.urls')),
+    path('contact/', contact, name='contact'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
