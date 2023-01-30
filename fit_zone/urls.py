@@ -19,6 +19,7 @@ from django.conf import settings
 from contact.views import contact
 from workout.views import Plan
 from django.conf.urls.static import static
+from .views import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,3 +35,4 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('workout/', Plan, name='workout'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+handler404 = 'fit_zone.views.handler404'
