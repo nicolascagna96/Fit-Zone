@@ -16,7 +16,7 @@ def contact(request):
             form.save()
             messages.success(
                 request,
-                'Your message has been sent sucesfully !' 
+                'Your message has been sent sucesfully !'
                 )
             return HttpResponseRedirect('/contact?submitted=True')
         else:

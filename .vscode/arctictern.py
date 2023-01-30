@@ -7,7 +7,6 @@ import json
 import os
 import requests
 import shutil
-import subprocess
 import sys
 from os.path import exists
 
@@ -48,7 +47,7 @@ UPGRADE_FILE_LIST = [{"filename": ".vscode/settings.json",
                      },
                      {"filename": ".vscode/arctictern.py",
                       "url": ".vscode/arctictern.py"
-                     }]
+                    }]
 
 FINAL_LINES = "\nexport POST_UPGRADE_RUN=1\nsource ~/.bashrc\n"
 
@@ -62,6 +61,7 @@ def get_versions():
         with open(".vscode/version.txt", "w") as f:
             f.write(str(THIS_VERSION))
     
+
     r = requests.get(BASE_URL + ".vscode/version.txt")
     CURRENT_VERSION = float(r.content)
 

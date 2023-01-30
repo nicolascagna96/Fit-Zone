@@ -20,7 +20,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     featured_image = models.ImageField(null=False, blank=False)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    
+
     class Meta:
         ordering = ['-created_on']
 
