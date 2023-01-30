@@ -397,6 +397,7 @@ input[name='q']::placeholder {
     margin-top: 20px;
 }
 
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
