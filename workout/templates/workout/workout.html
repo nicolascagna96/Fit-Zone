@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!--Contact page-->
+<div class="overlay bg-lg"></div>
+<div class="contact-overlay bg-dark"></div>
+<div class="container-fluid">
+    <div class="row h-100 w-100">
+        <div class="col-12 mt-6 mb-6 contact-form">
+
+            <h1>Request A Tailored Workout Program</h1>
+            <p>
+                <p>At our workout plan service, we understand the importance of staying active and healthy. That's why
+                    we've created custom workout plans tailored to your specific goals and fitness level. <br>Our plans
+                    include a variety of exercises, from cardio to strength training, to ensure that you're getting a
+                    well-rounded workout. <br>Our certified trainers will work with you to create a plan that fits your
+                    schedule and lifestyle, and they'll be available to answer any questions you may have along the way.
+                    <br>Whether you're looking to lose weight, build muscle, or just maintain your fitness, our workout
+                    plan service has got you covered. <br> <a href="{% url 'workout' %}">Sign up today</a> and start seeing results!</p>
+            </p>
+
+            <form action="{% url 'workout' %}" method="POST">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button class="btn btn-info" type="submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
