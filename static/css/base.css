@@ -279,7 +279,7 @@ input[name='q']::placeholder {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 30vh;
+    height: 33vh;
     width: 100%;
 }
 
@@ -303,8 +303,8 @@ input[name='q']::placeholder {
     width: 150%;
     background: #445261;
     -webkit-transform: skew(15deg);
-    -moz-transform: skew(10deg);
-    transform: skew(10deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
     z-index: 100;
 }
 
