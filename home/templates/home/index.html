@@ -2,33 +2,29 @@
 {% load static %}
 
 {% block page_header %}
-     <div class="container header-container">
-        <div class="row">
-            <div class="col">
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
 
-            </div>
         </div>
-     </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-300 d-none d-lg-flex" style="margin-top: 150px; margin-bottom: 150px;">
-            <div class="col-7 col-md-6 my-auto shop-now-cont">
-                <h1 class=" logo-font text-white">
-                    FitZone
-                </h1>
-                <h2> FitZone - Your Fitness Shop</h2>
-                <div class="my-5">
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3"> Shop Now </a>
-                </div>
-            </div>
-
-        </div>
-        <div class="row h-100">
-            <div class="my-auto mx-auto  d-block d-lg-none">
-                <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3"> Shop Now </a>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h1 class="intro-text display-5 p-3 logo-font text-white">
+                FitZone - Your Fitness Shop! <i class="fa-solid fa-dumbbell"> </i>
+            </h1>
+            <div class="my-5">
+                <h2>
+                    <a href="{% url 'products' %}"
+                        class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3 category-badge">Shop Now</a>
+                </h2>
             </div>
         </div>
+    </div>
 </div>
 {% endblock %}
