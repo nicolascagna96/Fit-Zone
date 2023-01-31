@@ -2,27 +2,33 @@
 {% load static %}
 
 {% block page_header %}
+     <div class="container header-container">
+        <div class="row">
+            <div class="col">
 
-<header class="container" header-container>
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</header>
-{% endblock %}
-{% block content %}
-
-<main class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 text-white col-md-6 my-auto">
-          <h1 class="display-4 logo-font text-white" role="img" aria-label="FitZone logo">
-               FitZone - No 1 Store in Ireland!
-          </h1>  
-          <div class="my-5">
-            <h4>
-                <a href="{% url 'products' %}" role="button" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-            </h4>
-          </div>
+            </div>
         </div>
-    </div>
-</main>
+     </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-300 d-none d-lg-flex" style="margin-top: 150px; margin-bottom: 150px;">
+            <div class="col-7 col-md-6 my-auto shop-now-cont">
+                <h1 class=" logo-font text-white">
+                    The Cheese Shop
+                </h1>
+                <h2> Cheese delivered to your door...</h2>
+                <div class="my-5">
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3"> Shop Now </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row h-100">
+            <div class="my-auto mx-auto  d-block d-lg-none">
+                <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3"> Shop Now </a>
+            </div>
+        </div>
+</div>
 {% endblock %}
