@@ -8,7 +8,7 @@ body {
     background: url('/static/image/pexels-andrea-piacquadio-3837423.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    font-family: 'Inter';
+    font-family: 'Lato', sans-serif;
     
 }
 
@@ -279,7 +279,7 @@ input[name='q']::placeholder {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 30vh;
     width: 100%;
 }
 
@@ -303,8 +303,8 @@ input[name='q']::placeholder {
     width: 150%;
     background: #445261;
     -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
+    -moz-transform: skew(10deg);
+    transform: skew(10deg);
     z-index: 100;
 }
 
@@ -326,6 +326,12 @@ input[name='q']::placeholder {
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
+}
+
+.blog-container {
+    margin: auto;
+    background-color: black;
+    color: white;
 }
 
 .btn-signup {
@@ -441,7 +447,8 @@ input[name='q']::placeholder {
         font-size: 1rem;
     }
 
-    #delivery-banner h4 {
+    
+     #delivery-banner h4 {
         font-size: .9rem;
     }
 

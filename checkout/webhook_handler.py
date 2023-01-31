@@ -99,6 +99,7 @@ class StripeWH_Handler:
                     original_bag=bag,
                     stripe_pid=pid,
                 )
+                print(f"Order: {order}")
                 order_exists = True
                 break
             except Order.DoesNotExist:
