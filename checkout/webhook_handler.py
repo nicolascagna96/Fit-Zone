@@ -9,7 +9,6 @@ from profiles.models import UserProfile
 
 import json
 import time
-import stripe
 
 
 class StripeWH_Handler:
@@ -29,6 +28,7 @@ class StripeWH_Handler:
             "checkout/confirmation_emails/confirmation_email_body.txt",
             {"order": order, "contact_email": settings.DEFAULT_FROM_EMAIL},
         )
+
         send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [cust_email])
 
     def handle_event(self, event):
@@ -48,12 +48,9 @@ class StripeWH_Handler:
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
 
-        # Get the Charge object
-        stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
-
-        billing_details = stripe_charge.billing_details
+        billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2)
+        grand_total = round(intent.charges.data[0].amount / 100, 2)
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -158,5 +155,4 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.payment_failed webhook from Stripe
         """
-        return HttpResponse(
-            content=f'Webhook received: {event["type"]}', status=200)
+        return HttpResponse(content=f'Webhook received: {event["type"]}', status=200)
