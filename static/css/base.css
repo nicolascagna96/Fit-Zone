@@ -467,3 +467,15 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+footer {
+    background-color: #0e0d0d;
+}
+.footer-logo {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#mc_embed_signup {
+    padding: 0;
+  }
