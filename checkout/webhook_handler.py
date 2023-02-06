@@ -97,7 +97,7 @@ class StripeWH_Handler:
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
                     original_bag=bag,
-                    stripe_pid=pid,
+                    # stripe_pid=pid,
                 )
                 print(f"Order: {order}")
                 order_exists = True
