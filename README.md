@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Fit Zone is a web-based e-commerce application that provides users with the tools and resources they need to achieve their fitness goals. The website is hosted on Heroku at https://fit-zone.herokuapp.com/.
+FitZone is   The website is hosted on Heroku at https://fit-zone.herokuapp.com/.
 
 ![picture alt](/static/image/fit-zone-home.PNG "fit-zone-homepage")
 
