@@ -3,7 +3,6 @@ from .models import Plan
 
 # Register your models here.
 
-
 @admin.register(Plan)
 class PlanAdmin(admin.ModelAdmin):
     """This class defines admin page for the Workout Plan Service"""
