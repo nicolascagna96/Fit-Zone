@@ -292,10 +292,11 @@ I've created also a robots.txt file. The robots.txt file is a standard used by w
 
 ## HTML
 
-## Python
-I used "python3-m flake8" to check for problems in the terminal. Some lines that were reccomanded to be shortened, I have left longer for readability purpose.
-
-## CSS
+## Python Validator - Flake8
+The website pep8online.com is currently down so flake8 was used. This can be done by typing "python3 -m flake8" command in the terminal. Migration and settings errors remain as advised by code institute. Click here to see the result:
+## CSS Validator
 
 ![picture alt](/static/image/css.PNG "fit-zone")
 
+## JS Validator
+Javascript was run through the JSHint validator.
