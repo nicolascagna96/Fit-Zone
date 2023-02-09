@@ -16,7 +16,7 @@ This website is for educational purposes only and the credit card payment functi
 # Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-- [UX](#ux)
+- [UX](#user-stories)
 - [Architecture](#architecture)
 - [Design](#agile-development)
 - [Design](#design) 
@@ -311,7 +311,7 @@ I checked the JS files with JSHint for conformity.
 
 # Manual Testing
 
-I manually tested the website functionality with users.
+I manually tested the website functionality as a User.
 
 - Create profile, log in and add personal info
 - Add products  to your basket
@@ -319,6 +319,11 @@ I manually tested the website functionality with users.
 - Use the filters to find the most expense item and add to your basket to get your delivery for free (your total needs to be over $50!)
 - Tested the contact and the workout-plan forms.
 - Checkout your shopping bag (use 4242 4242 4242 4242 for the card number and any CVC and date)
+
+# Further Testing
+
+![picture alt](/static/image/manual-testing.PNG "fit-zone")
+
 
 # Bugs
 
