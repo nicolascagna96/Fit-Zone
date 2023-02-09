@@ -92,11 +92,15 @@ FitZone is focused on selling B2C (Business to Customer) products to end users. 
 
 ## Database Schema
 
+![picture alt](/static/image/database-schema.PNG "fit-zone-homepage")
+
 # Design
 
 ## Wireframes
 
 ## Navigation
+
+![picture alt](/static/image/fit-zone.png)
 
 # Features
 
