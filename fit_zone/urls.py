@@ -34,5 +34,5 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('contact/', contact, name='contact'),
     path('workout/', Plan, name='workout'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'fit_zone.views.handler404'

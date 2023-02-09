@@ -288,9 +288,13 @@ I've created also a robots.txt file. The robots.txt file is a standard used by w
 
 # Testing
 
-## Validation Testing
+# Validation Testing
 
 ## HTML
+
+HTML files that have been validated with W3.
+
+![picture alt](/static/image/html-checker.PNG "fit-zone")
 
 ## Python Validator - Flake8
 The website pep8online.com is currently down so flake8 was used. This can be done by typing "python3 -m flake8" command in the terminal. Migration and settings errors remain as advised by code institute. Click here to see the result:
@@ -299,4 +303,100 @@ The website pep8online.com is currently down so flake8 was used. This can be don
 ![picture alt](/static/image/css.PNG "fit-zone")
 
 ## JS Validator
-Javascript was run through the JSHint validator.
+I checked the JS files with JSHint for conformity.
+
+# Manual Testing
+
+I manually tested the website functionality with users.
+
+- Create profile, log in and add personal info
+- Add products  to your basket
+- Search for item of your choice and add to your basket with a quantity of 5
+- Use the filters to find the most expense item and add to your basket to get your delivery for free (your total needs to be over $50!)
+- Tested the contact and the workout-plan forms.
+- Checkout your shopping bag (use 4242 4242 4242 4242 for the card number and any CVC and date)
+
+# Bugs
+
+- I had a problem with migrating the products database to the Postgres DB, the tutor helped in creating a json file to do it.
+
+# Unfixed Bugs
+- When running "python3 -m flake8" in the terminal some lines that were reccommended to be shortened, I have left longer for readability purposes.
+
+# Stripe
+For this project I used Stripe to test payments on the deployed site.
+
+- Create a new Stripe account.
+- Follow the documentation on [how to set up stripe](https://stripe.com/docs "Stripe").
+- Test the payment following the [Stripe Testing Payment](https://stripe.com/docs/testing "Stripe testing") documentation.
+
+# AWS - S3 Bucket
+- Create an account at aws.amazon.com
+- Create an Amazon S3 Bucket:
+ Go to the Amazon S3 Console and log in to your AWS account. Click on the "Create Bucket" button, enter a unique name for your bucket, select a region, and click on the "Create" button.
+
+- Configure your S3 Bucket:
+Go to the Properties tab of your S3 bucket and click on the "Static Website Hosting" option. Select "Use this bucket to host a website" and enter "index.html" as the index document. Save the changes.
+
+- Create a new IAM User:
+Go to the IAM Console, click on "Users", then "Add user". Enter a username and select "Programmatic access". Click on the "Next: Permissions" button and add the "AmazonS3FullAccess" policy to the user.
+
+- Store Access Key and Secret Access Key:
+After creating the user, you will get the "Access key ID" and "Secret access key". Store these in a safe place, you will need them later.
+
+- Add S3 Configuration to your Django Settings:
+Open the settings.py file of your Django project in Gitpod and add the following configuration:
+
+![picture alt](/static/image/AWS.PNG "AWS")
+
+- Install the boto3 library:
+In your Gitpod terminal, run the following command to install the boto3 library: pip install boto3
+
+- Run migrations and test the setup:
+Finally, run migrations and test the setup by uploading a file to your S3 bucket. If everything is working correctly, the file should be stored in your S3 bucket.
+
+# Google Email
+- Create an email account at google.com, login, go to accounts settings in your gmail account and then click on Other Google Account Settings
+- Go to accounts and import then click on other account settings
+- Under signing into Google, turn on 2-step verification and follow the steps to enable
+- Once verified click on app passwords, select Other as the app and give the password a name, for example Django
+- Click create and a 16 digit password will be generated, copy this 16 digit password
+- In the env.py file, create an environment variable called EMAIL_HOST_PASS with the 16 digit password
+- In the env.py file, create an environment variable called EMAIL_HOST_USER with the email address of the gmail account
+- Set and confirm the following values in the settings.py file to successfully send emails
+- You will also need to set the variables EMAIL_HOST_PASS and EMAIL_HOST_USER in your production instance, for example Heroku
+
+# Deployment
+
+- This project was developed using a GitPod workspace. The code was committed to Git and pushed to GitHub using the terminal.
+- Log in to Heroku and create a new app with an unique name.
+- In the Settings Tab, add the following key and value to the configvars:
+  - SECRET_KEY | VALUE: ******
+  - DATABASE_URL |ElephantSQL Database
+  - DISABLE_COLLECTSTATIC | value = 1 Remove this when releasing for Production.
+- Add this key/value to the settings.py in Gitpod.
+- create the Procfile
+- Set Debug = False and add X_FRAME_OPTIONS = SAMEORIGIN in the settings.py
+- git push the project to GitHub
+- In Heroku settings delete the config vars for DISABLE_COLLECTSTATIC = 1
+click the 'deploy' button.
+
+## Migrating databases
+- Create a database
+- Log in to ElephantSQL.com to access your dashboard
+- Click “Create New Instance”
+- Set up your plan
+- Select “Select Region” EXAMPLE "EU-West-1 (Ireland)"
+- Then click “Review”
+- Check your details are correct and then click “Create instance”
+- Return to the ElephantSQL dashboard and click on the database instance name for this project.
+
+# Credits
+- Code Institute - Boutique Ado - Walkthrough
+- Code Institute - Hello Django - Walkthrough
+- Code Institute - I think therefore I blog - Django blog project Walkthrough
+- Pexel and Unsplash for the images
+
+# Acknowledgements
+- I want to thank all the Code Institute's tutors for the great support
+- Martina Terlevic for reviewing my project and for providing to me a lot of useful feedbacks.
