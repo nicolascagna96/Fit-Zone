@@ -18,9 +18,9 @@ This website is for educational purposes only and the credit card payment functi
 - [Introduction](#introduction)
 - [UX](#user-stories)
 - [Architecture](#architecture)
-- [Design](#agile-development)
 - [Design](#design) 
 - [Features](#features)
+- [Marketing Strategies](#marketing-strategies)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [ Deployment](#deployment)
@@ -97,6 +97,10 @@ FitZone is focused on selling B2C (Business to Customer) products to end users. 
 # Design
 
 ## Wireframes
+![picture alt](/static/image/homepage-frame.PNG "fit-zone-homepage")
+![picture alt](/static/image/product-frame.PNG "fit-zone-product")
+![picture alt](/static/image/blog-frame.PNG "fit-zone-blog")
+![picture alt](/static/image/contact-frame.PNG "fit-zone-contact")
 
 ## Navigation
 
@@ -232,7 +236,7 @@ A 404 page was created to handle user navigational errors and give user a quick 
 - About us page
 - Customer Reviews functionality
 
-# Marketing Strategies & SEO
+# Marketing Strategies
 
 ## SEO - Search Engine Optimization
 
